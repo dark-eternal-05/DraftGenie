@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     if (request.action === "generateEmail") {
-      const apiKey = "your-openai-api-key"; // Replace with your OpenAI API key
+      const apiKey = "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"; 
       const { prompt, style } = request;
   
       const stylePrompts = {
