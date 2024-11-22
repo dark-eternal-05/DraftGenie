@@ -1,3 +1,23 @@
+/* Place @import rules at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Your custom styles come afterward */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -13,61 +33,56 @@ body {
   
   /* Extension Container */
   .container {
-    width: 400px;
+    width: 500px; /* Container width */
     background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Avoids overflow for rounded corners */
   }
   
   .container:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Header */
-  header {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #5e60ce;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(94, 96, 206, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
   
   /* Form Elements */
   form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    align-items: center;
   }
   
+  /* Input Box - Textarea */
   textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
+    width: 100%; /* Full width */
+    height: 200px; /* Increased height for better space utilization */
+    padding: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
+    border-radius: 10px;
     font-size: 1rem;
     outline: none;
-    transition: border-color 0.3s ease;
+    resize: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #f9f9f9; /* Soft background */
   }
   
   textarea:focus {
     border-color: #5e60ce;
-    box-shadow: 0 0 4px rgba(94, 96, 206, 0.5);
+    box-shadow: 0 0 6px rgba(94, 96, 206, 0.5);
   }
   
   /* Buttons */
   button {
-    padding: 10px 15px;
+    padding: 8px 15px; /* Reduced button size */
     background: #5e60ce;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem; /* Smaller font size */
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
@@ -75,7 +90,7 @@ body {
   
   button:hover {
     background: #4b4fba;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
   
   button:active {
@@ -83,17 +98,17 @@ body {
     transform: translateY(0);
   }
   
-  /* Output Section */
-  .output {
-    margin-top: 20px;
-    padding: 15px;
+/* Output Section */
+.output {
+    margin-top: 25px;
+    padding: 20px;
     background: #f8f9fa;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 0.95rem;
+    border-radius: 10px;
+    font-size: 1rem;
     text-align: left;
     color: #555;
-    max-height: 200px;
+    max-height: 250px;
     overflow-y: auto;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
   }
@@ -103,13 +118,13 @@ body {
     display: block;
     font-weight: bold;
     color: #5e60ce;
-    margin-bottom: 5px;
-  }
+    margin-bottom: 10px;
+  }  
   
   /* Footer */
   footer {
-    margin-top: 15px;
-    font-size: 0.85rem;
+    margin-top: 20px;
+    font-size: 0.95rem;
     color: #777;
   }
   
@@ -120,5 +135,19 @@ body {
   
   footer a:hover {
     text-decoration: underline;
+  }
+  
+  /* Smooth animation for elements */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .container, textarea, button {
+    animation: fadeIn 1s ease-out;
   }
   

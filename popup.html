@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>AI Email Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DraftGenie</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>AI Email Generator</h1>
-  <textarea id="emailPrompt" placeholder="Enter a brief description of the email"></textarea>
-  
-  <label for="emailStyle">Select Email Style:</label>
-  <select id="emailStyle">
-    <option value="formal">Formal</option>
-    <option value="casual">Casual</option>
-    <option value="persuasive">Persuasive</option>
-  </select>
-  
-  <button id="generateEmail">Generate Email</button>
-  <div id="result"></div>
+  <div class="container">
+    <form id="email-form">
+      <textarea id="email-input" placeholder="Write your email here..."></textarea>
+      <button id="generate-btn" type="submit">Generate Email</button>
+    </form>
+    <div id="output" class="output"></div>
+    <footer>
+      <p><a href="#">DraftGenie</a> by Dexogen</p>
+    </footer>
+  </div>
 
-  <h2>Saved Drafts</h2>
-  <ul id="savedDrafts"></ul>
-
-  <script src="popup.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
